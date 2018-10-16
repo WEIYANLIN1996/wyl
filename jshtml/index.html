@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>网站检测</title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div id"main">
+			<div id="seacher" style="width:100%;height:600px;margin: auto;">
+				<img src="banner1.jpg" style="width: 100%;height:100%;position: absolute;z-index: 1;"/>
+				<div id="title">网站安全检测.检测一下</div>
+				<div id="netbj">
+					<input type="text" name="one" id="network" placeholder="请输入要检测的网址" value="www.youku.com"/>
+					<button id="check1">开始检测</button>
+				</div>				
+			</div>
+			<div id="err" style="color:red;margin:auto;display:none;"></div>
+			<div id="safeinfo" style="display: none;">
+				<div id="safechart">
+					<div id="chart" style="height: 350px"></div>
+					<script src="js/chart.js"></script>
+					<script type="text/javascript">						
+					</script>
+
+					<div id="wwwinfo">
+						<ul id="datawww"> 
+							
+                        </ul>
+					</div>
+				</div>
+				<div id="data">
+					<table>
+						<tr><td>指数维度</td><td>检测类型</td><td>检测项目</td><td>检测结果</td></tr>
+					</table>
+					<div id="zw">
+						<div style="width: 100%;height:448px;border:1px solid #E0E0E0;position: absolute;margin-top: 0;text-align: center;line-height: 448px;border-top:0 ;">实时安全</div>
+						<div style="width: 100%;height:163px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 450px;text-align: center;line-height: 163px;border-top:0 ;">历史安全</div>
+						<div style="width: 100%;height:417px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 603px;text-align: center;line-height: 417px;border-top:0 ;">网站环境</div>
+						<div style="width: 100%;height:165px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 1023px;text-align: center;line-height: 165px;border-top:0 ;">攻击风险</div>
+					</div>
+					<div id="jx">
+						<div style="width: 100%;height:123px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 0;text-align: center;line-height: 123px;border-top:0 ;">网站恶意内容</div>
+						<div style="width: 100%;height:80px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 123px;text-align: center;line-height: 80px;border-top:0 ;">网站安全威胁</div>
+						<div style="width: 100%;height:245px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 204px;text-align: center;line-height: 240px;border-top:0 ;">网站安全漏洞</div>
+						<div style="width: 100%;height:163px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 450px;text-align: center;line-height: 160px;border-top:0 ;">网站历史安全</div>
+						<div style="width: 100%;height:337px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 603px;text-align: center;line-height: 320px;border-top:0 ;">网站服务</div>
+						<div style="width: 100%;height:80px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 941px;text-align: center;line-height: 80px;border-top:0 ;">网站表现</div>
+						<div style="width: 100%;height:165px;border: 1px  solid #E0E0E0;position: absolute;margin-top: 1023px;text-align: center;line-height: 160px;border-top:0 ;">攻击风险</div>
+					</div>
+					<div id="jm">
+						<ul>
+							<li>虚假和欺诈等不良信息</li>
+							<li>挂马和恶意链接</li>
+							<li>黑链和恶意劫持</li>
+							<li>应用威胁</li>
+							<li>服务威胁</li>
+							<li>服务器入侵</li>
+							<li>用户数据窃取</li>
+							<li>暴露站点目录结构</li>
+							<li>敏感信息泄露</li>
+							<li>管理后台暴露</li>
+							<li>其他</li>
+							<li>持续安全时间</li>
+							<li>安全响应时间</li>
+							<li>安全事件次数</li>
+							<li>安全事件种类</li>
+							<li>Web应用</li>
+							<li>Web服务器</li>
+							<li>开发语言</li>
+							<li>安全服务</li>
+							<li>DNS服务商</li>
+							<li>跨地域负载均衡</li>
+							<li>主机服务商</li>
+							<li>其他服务</li>
+							<li>最近30天网站可用率</li>
+							<li>最近30天平均首屏时间</li>
+							<li>行业攻击风险</li>
+							<li>网站集中风险</li>
+							<li>自身攻击风险</li>
+							<li>突发0Day漏洞</li>
+						</ul>
+					</div>
+					<div id="jj">
+						<ul id="dataitems"></ul>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</body>
+</html>

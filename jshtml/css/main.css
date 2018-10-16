@@ -1,0 +1,150 @@
+*{margin: 0;padding: 0;}
+#title{
+	width: 30%;
+	height: 50px;
+	color: white;
+	margin-left: 55%;
+	margin-top: 10%;
+	line-height: 50px;
+	text-align: center;
+	font-size: 25px;
+	position: absolute;
+	display: none;
+	z-index: 2;
+}
+#netbj{
+	width: 40%;
+	height: 50px;
+	margin-left:55%;
+	margin-top: 18%;
+	position: absolute;
+	z-index: 3;
+}	
+#network{
+	width: 50%;
+	height: 40px;
+	border: 1px solid #D9FFFF;
+	margin-left:1px ;
+	line-height: 50px;
+	position: absolute;
+}
+#check1{
+	width: 20%;
+	height: 45px;
+	background-color:#2894FF;
+	color: white;
+	border-radius: 5px 5px 5px 5px;
+	border: 0;
+	line-height: 50px;
+	position: absolute;
+	margin-left: 52%;
+}
+#safechart{
+	width: 100%;
+	height: 352px;
+	z-index: 4;
+}
+#chart{
+	width: 60%;
+	margin-left: 40%;
+	border: 1px solid wheat;
+	position: absolute;
+}
+#chart p{
+	display: block;
+	width: 30%;
+	height: 30px;
+	margin-left: 30%;
+	margin-top: 310px;
+	position: absolute;
+	font-size: 15px;
+}
+#wwwinfo{
+	width: 40%;
+	height: 350px;
+	margin-left: 0;
+	position: absolute;
+}
+#wwwinfo ul{
+	margin-top: 60px;
+	width: 100%;
+	height: 80%;
+	margin-left:0;
+}
+#wwwinfo ul li{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	list-style: none;
+	border:1px solid #E0E0E0;
+	font-size: 20px;
+	color:black;
+	line-height: 50px;
+}
+#data{
+	width: 100%;
+	height: auto;
+	margin-top: 0;
+	position: absolute;
+	padding: 0px;
+}
+#data table{
+	width: 100%;
+	height: 50px;
+	margin-top: 0;
+	border: 0;
+	padding: 0px;
+}
+#data table tr td{
+	width: 25%;
+	height: 50px;
+	border:1px solid #E0E0E0;
+	border-left: 0;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 0;
+}
+#zw{
+	width: 25%;
+	height: auto;
+	margin-left: 0;
+	border-right:1px solid #E0E0E0;
+	position:absolute;
+}
+#jx{
+	width: 25%;
+	height: auto;
+	margin-left: 25%;
+	border-right:1px solid #E0E0E0;
+	position:absolute;
+}
+#jm{
+	width: 25%;
+	height: auto;
+	margin-left:50%;
+	border-right:1px solid #E0E0E0;
+	position:absolute;
+}
+#jj{
+	width: 25%;
+	height: auto;
+	margin-left: 75%;
+	border-right:1px solid #E0E0E0;
+	position:absolute;
+}
+#jm ul li{
+	list-style: none;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px  solid #E0E0E0;
+	text-align: center;
+	line-height: 40px;	
+}
+#jj ul li{
+	list-style: none;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px  solid #E0E0E0;
+	text-align: center;
+	line-height: 40px;	
+}
